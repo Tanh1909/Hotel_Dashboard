@@ -198,7 +198,7 @@ table.table td h2 a {
 }
 
 table.table td h2 a:hover {
-    color: #2962ff
+    color: #009688
 }
 
 table.table td h2 span {
@@ -404,7 +404,7 @@ table.table td h2 span {
 
 .bg-primary,
 .badge-primary {
-    background-color: #2962ff !important
+    background-color: #009688 !important
 }
 
 a.bg-primary:focus,
@@ -473,7 +473,7 @@ button.bg-danger:hover {
 
 .text-primary,
 .dropdown-menu>li>a.text-primary {
-    color: #2962ff !important
+    color: #009688 !important
 }
 
 .text-success,
@@ -555,8 +555,8 @@ button.bg-danger:hover {
 
 .btn-primary.disabled,
 .btn-primary:disabled {
-    background-color: #2962ff;
-    border-color: #2962ff;
+    background-color: #009688;
+    border-color: #009688;
     color: #fff
 }
 
@@ -774,13 +774,13 @@ button.bg-danger:hover {
 }
 
 .btn-outline-primary {
-    color: #2962ff;
-    border-color: #2962ff
+    color: #009688;
+    border-color: #009688
 }
 
 .btn-outline-primary:hover {
-    background-color: #2962ff;
-    border-color: #2962ff
+    background-color: #009688;
+    border-color: #009688
 }
 
 .btn-outline-primary:focus,
@@ -790,15 +790,15 @@ button.bg-danger:hover {
 
 .btn-outline-primary.disabled,
 .btn-outline-primary:disabled {
-    color: #2962ff;
+    color: #009688;
     background-color: transparent
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active,
 .btn-outline-primary:not(:disabled):not(.disabled).active,
 .show>.btn-outline-primary.dropdown-toggle {
-    background-color: #2962ff;
-    border-color: #2962ff
+    background-color: #009688;
+    border-color: #009688
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus,
@@ -963,17 +963,17 @@ button.bg-danger:hover {
 .pagination>.active>span,
 .pagination>.active>span:focus,
 .pagination>.active>span:hover {
-    background-color: #2962ff;
-    border-color: #2962ff
+    background-color: #009688;
+    border-color: #009688
 }
 
 .pagination>li>a,
 .pagination>li>span {
-    color: #2962ff
+    color: #009688
 }
 
 .page-link:hover {
-    color: #2962ff
+    color: #009688
 }
 
 .page-link:focus {
@@ -995,7 +995,7 @@ button.bg-danger:hover {
 
 .dropdown-item.active,
 .dropdown-item:active {
-    background-color: #2962ff
+    background-color: #009688
 }
 
 .navbar-nav .open .dropdown-menu {
@@ -1061,12 +1061,12 @@ button.bg-danger:hover {
 
 .bootstrap-datetimepicker-widget table td.active,
 .bootstrap-datetimepicker-widget table td.active:hover {
-    background-color: #2962ff;
+    background-color: #009688;
     text-shadow: unset
 }
 
 .bootstrap-datetimepicker-widget table td.today:before {
-    border-bottom-color: #2962ff
+    border-bottom-color: #009688
 }
 
 .bg-info-light {
@@ -1145,7 +1145,7 @@ button.bg-danger:hover {
 }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-    background-color: #2962ff
+    background-color: #009688
 }
 
 .select2-container--default .select2-selection--multiple {
@@ -1180,8 +1180,8 @@ button.bg-danger:hover {
 .nav-tabs.nav-tabs-solid>.active>a,
 .nav-tabs.nav-tabs-solid>.active>a:hover,
 .nav-tabs.nav-tabs-solid>.active>a:focus {
-    background-color: #2962ff;
-    border-color: #2962ff;
+    background-color: #009688;
+    border-color: #009688;
     color: #fff
 }
 
@@ -1287,7 +1287,7 @@ button.bg-danger:hover {
 .nav-tabs.nav-tabs-top>li>a.active,
 .nav-tabs.nav-tabs-top>li>a.active:hover,
 .nav-tabs.nav-tabs-top>li>a.active:focus {
-    border-top-color: #2962ff
+    border-top-color: #009688
 }
 
 .nav-tabs.nav-tabs-bottom>li {
@@ -1299,7 +1299,7 @@ button.bg-danger:hover {
 .nav-tabs.nav-tabs-bottom>li>a.active:focus {
     border-bottom-width: 2px;
     border-color: transparent;
-    border-bottom-color: #2962ff;
+    border-bottom-color: #009688;
     background-color: transparent;
     transition: none 0s ease 0s;
     -moz-transition: none 0s ease 0s;
@@ -1350,7 +1350,7 @@ button.bg-danger:hover {
 }
 
 .line {
-    background-color: #2962ff;
+    background-color: #009688;
     height: 2px;
     margin: 0;
     width: 60px
@@ -1419,7 +1419,7 @@ button.bg-danger:hover {
 .avatar-title {
     width: 100%;
     height: 100%;
-    background-color: #2962ff;
+    background-color: #009688;
     color: #fff;
     display: flex;
     align-items: center;
@@ -2957,7 +2957,7 @@ html.menu-opened body {
 .fc-state-down,
 .fc-state-active,
 .fc-state-disabled {
-    background-color: #2962ff !important;
+    background-color: #009688 !important;
     color: #fff !important;
     text-shadow: none !important
 }
@@ -3035,7 +3035,7 @@ html.menu-opened body {
 }
 
 .mail-list>li.active>a {
-    color: #2962ff;
+    color: #009688;
     font-weight: 700
 }
 
@@ -3652,7 +3652,7 @@ table.table-inbox tbody tr.checked {
 .chat-window .chat-cont-right .chat-footer .input-group .input-group-append .btn.msg-send-btn {
     background: linear-gradient(to right, #8971ea, #7f72ea, #7574ea, #6a75e9, #5f76e8);
     background: -webkit-linear-gradient(to right, #8971ea, #7f72ea, #7574ea, #6a75e9, #5f76e8);
-    border-color: #2962ff;
+    border-color: #009688;
     border-radius: 50%;
     color: #fff;
     margin-left: 10px
@@ -4852,7 +4852,7 @@ h3.page-sub-title {
 }
 
 .skin-settings .skin-colors .skin-purple {
-    background-color: #2962ff
+    background-color: #009688
 }
 
 .skin-settings .skin-colors li a.active:after {
