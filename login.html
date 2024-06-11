@@ -68,6 +68,31 @@
     <script src="assets/js/script.js"></script>
     <script>
         $(document).ready(function () {
+            function validateEmail(email) {
+                var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                return re.test(email);
+            }
+
+            $('#email').on('input', function () {
+                var email = $(this).val().trim();
+                if (email === '') {
+                    $('#emailError').text('Vui lòng nhập email.');
+                } else if (!validateEmail(email)) {
+                    $('#emailError').text('Email không hợp lệ.');
+                } else {
+                    $('#emailError').text('');
+                }
+            });
+
+            $('#password').on('input', function () {
+                var password = $(this).val().trim();
+                if (password === '') {
+                    $('#passwordError').text('Vui lòng nhập mật khẩu.');
+                } else {
+                    $('#passwordError').text('');
+                }
+            });
+
             $('#loginForm').on('submit', function (e) {
                 e.preventDefault();
 
@@ -75,11 +100,9 @@
                 var password = $('#password').val().trim();
                 var isValid = true;
 
-                // Reset error messages
                 $('#emailError').text('');
                 $('#passwordError').text('');
 
-                // Validate email
                 if (email === '') {
                     $('#emailError').text('Vui lòng nhập email.');
                     isValid = false;
@@ -88,22 +111,15 @@
                     isValid = false;
                 }
 
-                // Validate password
                 if (password === '') {
                     $('#passwordError').text('Vui lòng nhập mật khẩu.');
                     isValid = false;
                 }
 
-                // If valid, redirect to index.html
                 if (isValid) {
                     window.location.href = 'index.html';
                 }
             });
-
-            function validateEmail(email) {
-                var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-                return re.test(email);
-            }
         });
     </script>
 </body>

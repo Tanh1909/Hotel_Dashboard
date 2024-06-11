@@ -116,43 +116,43 @@
 								<div class="col-md-4">
 									<div class="form-group">
 										<label>Mã tài khoản</label>
-										<input class="form-control" type="text" value="">
+										<input class="form-control" type="text" value="" name="checkVal">
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-group">
 										<label>Tên tài khoản</label>
-										<input class="form-control" type="text" value="">
+										<input class="form-control" type="text" value="" name="checkVal">
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-group">
 										<label>Họ tên</label>
-										<input class="form-control" type="text" value="">
+										<input class="form-control" type="text" value="" name="checkVal">
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-group">
 										<label>Mật khẩu</label>
-										<input class="form-control" type="text" value="">
+										<input class="form-control" type="text" value="" name="checkVal">
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-group">
 										<label>Nhập lại mật khẩu</label>
-										<input class="form-control" type="text" value="">
+										<input class="form-control" type="text" value="" name="checkVal">
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-group">
 										<label>Email</label>
-										<input class="form-control" type="text" value="">
+										<input class="form-control" type="text" value="" name="checkVal">
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-group">
 										<label>Số điện thoại</label>
-										<input class="form-control" type="text" value="">
+										<input class="form-control" type="text" value="" name="checkVal">
 									</div>
 								</div>
 
@@ -179,7 +179,27 @@
 						</form>
 					</div>
 				</div>
-				<button type="button" class="btn btn-primary buttonedit ml-2">Thêm</button>
+				<button type="button" class="btn btn-primary buttonedit1 ml-2">Thêm</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Thông báo</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					Đã thêm thành công!
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary okBtn" data-dismiss="modal">OK</button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -193,9 +213,18 @@
 	<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
 	<script src="assets/js/script.js"></script>
 	<script>
-		$(function () {
-			$('#datetimepicker3').datetimepicker({
-				format: 'LT'
+		$(document).ready(function () {
+			$(".buttonedit1").click(function () {
+				$(".text-danger").remove();
+				var checkVal = $("input[name='checkVal']").val();
+				if (checkVal == "") {
+					$("input[name='checkVal']").after("<p class='text-danger'>Vui lòng nhập trường này!</p>");
+				} else {
+					window.$('#successModal').modal('show');
+					$(".okBtn").click(function () {
+						window.location.href = "all-accounts.html";
+					});
+				}
 			});
 		});
 	</script>
