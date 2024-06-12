@@ -136,12 +136,12 @@
 								<div class="col-md-4">
 									<div class="form-group">
 										<label>Mã phòng</label>
-										<input class="form-control" type="text" value="R001"> </div>
+										<input class="form-control" type="text" value="R001" name="checkVal1"> </div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-group">
 										<label>Tên phòng</label>
-										<input class="form-control" type="text" value="101"> </div>
+										<input class="form-control" type="text" value="101" name="checkVal2"> </div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-group">
@@ -156,7 +156,7 @@
 								<div class="col-md-4">
 									<div class="form-group">
 										<label>Kích thước</label>
-										<input class="form-control" type="text" value="45m2"> </div>
+										<input class="form-control" type="text" value="45m2" name="checkVal3"> </div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-group">
@@ -205,7 +205,7 @@
 								<div class="col-md-4">
 									<div class="form-group">
 										<label>Giá phòng</label>
-										<input type="text" class="form-control" id="usr1"> </div>
+										<input type="text" class="form-control" id="usr1" name="checkVal4" value="1.225.000 VNĐ"> </div>
 								</div>
 								<!-- <div class="col-md-4">
 									<div class="form-group">
@@ -217,11 +217,31 @@
 						</form>
 					</div>
 				</div>
-				<button type="button" class="btn btn-primary buttonedit ml-2">Lưu</button>
+				<button type="button" class="btn btn-primary buttonedit1 ml-2">Lưu</button>
 				<a href="all-rooms.html" class="btn btn-primary buttonedit pt-2 ml-2">Hủy</a>
 			</div>
 		</div>
 
+	</div>
+
+	<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Thông báo</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					Đã sửa thành công!
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary okBtn" data-dismiss="modal">OK</button>
+				</div>
+			</div>
+		</div>
 	</div>
 
 
@@ -243,6 +263,38 @@
 			$('#datetimepicker3').datetimepicker({
 				format: 'LT'
 
+			});
+		});
+		$(document).ready(function () {
+			$(".buttonedit1").click(function () {
+				$(".text-danger").remove();
+				var isChecked = true;
+				var checkVal1 = $("input[name='checkVal1']").val();
+				var checkVal2 = $("input[name='checkVal2']").val();
+				var checkVal3 = $("input[name='checkVal3']").val();
+				var checkVal4 = $("input[name='checkVal4']").val();
+				if (checkVal1 == "") {
+					$("input[name='checkVal1']").after("<p class='text-danger'>Vui lòng nhập trường này!</p>");
+					isChecked = false;
+				}
+				if (checkVal2 == "") {
+					$("input[name='checkVal2']").after("<p class='text-danger'>Vui lòng nhập trường này!</p>");
+					isChecked = false;
+				}
+				if (checkVal3 == "") {
+					$("input[name='checkVal3']").after("<p class='text-danger'>Vui lòng nhập trường này!</p>");
+					isChecked = false;
+				}
+				if (checkVal4 == "") {
+					$("input[name='checkVal4']").after("<p class='text-danger'>Vui lòng nhập trường này!</p>");
+					isChecked = false;
+				}
+				if (isChecked) {
+					window.$('#successModal').modal('show');
+					$(".okBtn").click(function () {
+						window.location.href = "all-rooms.html";
+					});
+				}
 			});
 		});
 	</script>

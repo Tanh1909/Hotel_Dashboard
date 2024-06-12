@@ -127,20 +127,20 @@
 								<div class="col-md-4">
 									<div class="form-group">
 										<label>Mã đơn đền bù ID</label>
-										<input class="form-control" type="text" value="MD-0001">
+										<input class="form-control" type="text" value="MD-0001" name="checkVal1">
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-group">
 										<label>Mã đơn đặt phòng</label>
-										<input class="form-control" type="text" value="DP-0003">
+										<input class="form-control" type="text" value="DP-0003" name="checkVal2">
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-group">
 										<label>Ngày</label>
 										<div class="cal-icon">
-											<input type="text" class="form-control datetimepicker" value="02/06/2024">
+											<input type="text" class="form-control datetimepicker" value="02/06/2024" name="checkVal3">
 										</div>
 									</div>
 								</div>
@@ -149,13 +149,13 @@
 								<div class="col-md-4">
 									<div class="form-group">
 										<label>Tên khách hàng</label>
-										<input type="text" class="form-control" id="usr" value="Nguyễn Văn A">
+										<input type="text" class="form-control" id="usr" value="Nguyễn Văn A" name="checkVal4">
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-group">
 										<label>Tổng tiền</label>
-										<input type="text" class="form-control" id="usr" value="1.000.000">
+										<input type="text" class="form-control" id="usr" value="1.000.000" name="checkVal5">
 									</div>
 								</div>
 
@@ -179,6 +179,25 @@
 	</div>
 
 
+	<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Thông báo</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					Đã sửa thành công!
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary okBtn" data-dismiss="modal">OK</button>
+				</div>
+			</div>
+		</div>
+	</div>
 	<script src="assets/js/jquery-3.5.1.min.js"></script>
 
 	<script src="assets/js/popper.min.js"></script>
@@ -196,7 +215,43 @@
 		$(function () {
 			$('#datetimepicker3').datetimepicker({
 				format: 'LT'
-
+			});
+		});
+		$(document).ready(function () {
+			$(".buttonedit1").click(function () {
+				$(".text-danger").remove();
+				var isChecked = true;
+				var checkVal1 = $("input[name='checkVal1']").val();
+				var checkVal2 = $("input[name='checkVal2']").val();
+				var checkVal3 = $("input[name='checkVal3']").val();
+				var checkVal4 = $("input[name='checkVal4']").val();
+				var checkVal5 = $("input[name='checkVal5']").val();
+				if (checkVal1 == "") {
+					$("input[name='checkVal1']").after("<p class='text-danger'>Vui lòng nhập trường này!</p>");
+					isChecked = false;
+				}
+				if (checkVal2 == "") {
+					$("input[name='checkVal2']").after("<p class='text-danger'>Vui lòng nhập trường này!</p>");
+					isChecked = false;
+				}
+				if (checkVal3 == "") {
+					$("input[name='checkVal3']").after("<p class='text-danger'>Vui lòng nhập trường này!</p>");
+					isChecked = false;
+				}
+				if (checkVal4 == "") {
+					$("input[name='checkVal4']").after("<p class='text-danger'>Vui lòng nhập trường này!</p>");
+					isChecked = false;
+				}
+				if (checkVal5 == "") {
+					$("input[name='checkVal5']").after("<p class='text-danger'>Vui lòng nhập trường này!</p>");
+					isChecked = false;
+				}
+				if (isChecked) {
+					window.$('#successModal').modal('show');
+					$(".okBtn").click(function () {
+						window.location.href = "all-compensations.html";
+					});
+				}
 			});
 		});
 	</script>

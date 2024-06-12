@@ -116,19 +116,19 @@
 								<div class="col-md-4">
 									<div class="form-group">
 										<label>Mã tài khoản</label>
-										<input class="form-control" type="text" value="" name="checkVal">
+										<input class="form-control" type="text" value="" name="checkVal1">
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-group">
 										<label>Tên tài khoản</label>
-										<input class="form-control" type="text" value="" name="checkVal">
+										<input class="form-control" type="text" value="" name="checkVal2">
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-group">
 										<label>Họ tên</label>
-										<input class="form-control" type="text" value="" name="checkVal">
+										<input class="form-control" type="text" value="" name="checkVal3">
 									</div>
 								</div>
 								<div class="col-md-4">
@@ -216,10 +216,43 @@
 		$(document).ready(function () {
 			$(".buttonedit1").click(function () {
 				$(".text-danger").remove();
-				var checkVal = $("input[name='checkVal']").val();
-				if (checkVal == "") {
-					$("input[name='checkVal']").after("<p class='text-danger'>Vui lòng nhập trường này!</p>");
-				} else {
+				var isChecked = true;
+				var checkVal1 = $("input[name='checkVal1']").val();
+				var checkVal2 = $("input[name='checkVal2']").val();
+				var checkVal3 = $("input[name='checkVal3']").val();
+				var checkVal4 = $("input[name='checkVal4']").val();
+				var checkVal5 = $("input[name='checkVal5']").val();
+				var checkVal6 = $("input[name='checkVal6']").val();
+				var checkVal7 = $("input[name='checkVal7']").val();
+				if (checkVal1 == "") {
+					$("input[name='checkVal1']").after("<p class='text-danger'>Vui lòng nhập trường này!</p>");
+					isChecked = false;
+				}
+				if (checkVal2 == "") {
+					$("input[name='checkVal2']").after("<p class='text-danger'>Vui lòng nhập trường này!</p>");
+					isChecked = false;
+				}
+				if (checkVal3 == "") {
+					$("input[name='checkVal3']").after("<p class='text-danger'>Vui lòng nhập trường này!</p>");
+					isChecked = false;
+				}
+				if (checkVal4 == "") {
+					$("input[name='checkVal4']").after("<p class='text-danger'>Vui lòng nhập trường này!</p>");
+					isChecked = false;
+				}
+				if (checkVal5 == "") {
+					$("input[name='checkVal5']").after("<p class='text-danger'>Vui lòng nhập trường này!</p>");
+					isChecked = false;
+				}
+				if (checkVal6 == "") {
+					$("input[name='checkVal6']").after("<p class='text-danger'>Vui lòng nhập trường này!</p>");
+					isChecked = false;
+				}
+				if (checkVal7 == "") {
+					$("input[name='checkVal7']").after("<p class='text-danger'>Vui lòng nhập trường này!</p>");
+					isChecked = false;
+				}
+				if (isChecked) {
 					window.$('#successModal').modal('show');
 					$(".okBtn").click(function () {
 						window.location.href = "all-accounts.html";
